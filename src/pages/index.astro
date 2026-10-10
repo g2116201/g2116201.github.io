@@ -1,18 +1,14 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Aditya Gupta | Home </title>
-	</head>
-	<body>
-		<h1>Aditya Gupta</h1>
-		<img src="public/LinkedIn Profile Picture Square.jpeg" alt="Profile Picture">
-	</body>
-</html>
+<Layout title="Aditya Gupta | Home">
+  <Hero />
+  <About />
+  <Projects />
+  <Contact />
+</Layout>

@@ -1,0 +1,93 @@
+---
+const projects = [
+  {
+    title: 'Quantum-Inspired Approach to Transformer Interpreability',
+    summary: 'First author of <a href="https://arxiv.org/pdf/2510.11963">paper</a> introducing a quantum-inspired approach to mathematically model the probability transitions facilitated by Transformer layers via Tuned lens-derived state vectors, unitary operators, and Hamiltonians. Tested ideas by designing and training multiple attention-based machine learning models using PyTorch, the codebase of which is available on <a href="https://github.com/g2116201/QLens">GitHub</a>',
+    tags: ['Interpreability', 'Quantum Mechanics', 'Research'],
+  },
+  {
+    title: 'Epistemically-Motivated Proactive AI Agents',
+    summary: 'Co-author to <a href="https://arxiv.org/pdf/2601.09926">ACL 2026 paper</a> proposing agentic AI framework that adopts an epistemic approach to proactivity aimed at addressing user knowledge gaps. Contributed to literature review, preprocessed 4 datasets, engaged in synthetic dataset generation, and fine-tuned a Transformer-based model',
+    tags: ['Agentic AI', 'Machine Learning', 'Research'],
+  },
+  {
+    title: 'Animated Math Explainers',
+    summary: 'Created visual math explainers using the Python library Manim for high school’s calculus students. Posted videos to the channel <a href="https://www.youtube.com/@pimath7779">PiMath</a>, which has 21.8k+ views and 515+ subscribers, with a global comment base.',
+    tags: ['Teaching', 'Python', 'Design'],
+  },
+];
+---
+
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Projects</h2>
+      <p>A few selected pieces of my work.</p>
+    </div>
+    <div class="grid">
+      {projects.map((project) => (
+        <article class="card">
+          <h3>{project.title}</h3>
+          <p set:html={project.summary} />
+          <ul>
+            {project.tags.map((tag) => (
+              <li>{tag}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.6rem;
+    background: var(--white);
+    min-height: 14rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .card h3 {
+    color: var(--navy);
+  }
+
+  .card p :global(a) {
+    color: var(--navy-light);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .card ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-top: auto;
+  }
+
+  .card li {
+    background: var(--off-white);
+    color: var(--navy-light);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

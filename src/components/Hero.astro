@@ -1,0 +1,105 @@
+---
+---
+
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="portrait">
+      <img
+        src="/profile.jpeg"
+        alt="Portrait of Aditya Gupta"
+        width="420"
+        height="420"
+      />
+    </div>
+    <div class="copy">
+      <p class="eyebrow">Student · Portfolio</p>
+      <h1>Aditya Gupta</h1>
+      <p class="lede">
+        Undergrad at Yale University
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+    color: var(--white);
+    padding: 5rem 0 4.5rem;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 2.25rem;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.78rem;
+    opacity: 0.75;
+    margin-bottom: 0.75rem;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .lede {
+    max-width: 38rem;
+    opacity: 0.9;
+    margin: 0 auto 1.75rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.85rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 600;
+    border: 1px solid transparent;
+  }
+
+  .primary {
+    background: var(--white);
+    color: var(--navy);
+  }
+
+  .ghost {
+    border-color: rgba(255, 255, 255, 0.45);
+  }
+
+  .portrait {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .portrait img {
+    width: min(100%, 18rem);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow);
+    background: var(--off-white);
+    margin-inline: auto;
+  }
+</style>
